@@ -1,29 +1,18 @@
-PRATHAMONE PRESS — Stable v4 (AUTO DB)
+PRATHAMONE PRESS — Stable v5 (Full Theme Restore)
 
-This release includes an auto DB initializer script which will create tables and insert seed data
-when run with a Postgres connection string.
+This is the full, styled, production-ready build with runtime-safe API routes and auto DB support.
 
-STEPS (local):
+1) Copy .env.local.example -> .env.local and fill vars:
+   NEXT_PUBLIC_SUPABASE_URL
+   NEXT_PUBLIC_SUPABASE_ANON_KEY
+   SUPABASE_SERVICE_ROLE_KEY
+   SUPABASE_DB_URL (use pooler port 6543 and URL-encode special characters in password)
 
-1) Copy .env.local.example -> .env.local and fill values:
-   - NEXT_PUBLIC_SUPABASE_URL
-   - NEXT_PUBLIC_SUPABASE_ANON_KEY
-   - SUPABASE_SERVICE_ROLE_KEY
-   - SUPABASE_DB_URL  <-- This must be your Supabase Postgres connection string (DB URL)
+2) npm install
+3) npm run init-db  # runs migrations + seed using SUPABASE_DB_URL
+4) npm run dev
+5) Visit http://localhost:3000
 
-2) Install deps:
-   npm install
-
-3) Run auto-init:
-   npm run init-db
-   This will connect to SUPABASE_DB_URL and run migrations + seed.sql
-
-4) Start dev server:
-   npm run dev
-   Open http://localhost:3000
-
-DEPLOY (Vercel):
-
-- Set environment variables in Vercel (same as .env.local)
-- Deploy the project
-- You can run the init-db script on your CI or locally using the SUPABASE_DB_URL from Supabase settings.
+Deploy notes:
+- Add same env vars in Vercel (Production + Preview + Development)
+- You may run init-db during CI using SUPABASE_DB_URL (careful with secrets)

@@ -1,4 +1,3 @@
--- 0001_init.sql
 create extension if not exists "pgcrypto";
 
 create table if not exists books (

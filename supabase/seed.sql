@@ -1,4 +1,3 @@
--- seed.sql
 insert into books (title, subtitle, slug, cover_url, description)
 values ('Coder who fears before Ai', 'A HumorTech Memoir', 'coder-who-fears-before-ai', '/branding/book-cover.jpg', 'A short description about the book.')
 on conflict (slug) do nothing;

@@ -1,1 +1,28 @@
-:root{--color-accent:#d98528} body{font-family:Georgia,serif;margin:0} .container{max-width:1000px;margin:40px auto;padding:20px}
+:root{
+  --bg:#fff;
+  --text:#111;
+  --saffron:#d98528;
+  --saffron-2:#e9a15b;
+  --muted:#666;
+  --radius:12px;
+  --shadow: 0 8px 30px rgba(0,0,0,0.06);
+  font-family: "Gandhi Serif", Georgia, "Times New Roman", serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+.header{border-bottom:1px solid #f3f3f3;padding:18px 0}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.brand{display:flex;align-items:center;gap:14px;font-weight:700;font-size:18px}
+.brand .mark{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--saffron),var(--saffron-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:18px}
+.nav a{margin-left:18px;text-decoration:none;color:inherit;font-size:15px}
+.hero{padding:36px 0 12px 0}
+.hero h1{font-size:44px;margin:0;line-height:1.05}
+.lead{color:var(--muted);margin-top:8px}
+.grid{display:grid;gap:18px}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.card{background:white;border-radius:10px;box-shadow:var(--shadow);padding:18px}
+.card h3{margin:0 0 8px 0}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--saffron);color:white;text-decoration:none}
+.footer{padding:28px 0;border-top:1px solid #f5f5f5;margin-top:40px;text-align:center;color:var(--muted)}
+.small{color:var(--muted)}
+.debug-border{outline:2px dashed rgba(0,0,0,0.04)}

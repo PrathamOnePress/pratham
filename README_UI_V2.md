@@ -1,15 +1,8 @@
-PrathamOne UI v2 - Deep-Blue Silver
-Generated: 2025-12-03T22:48:10.964957Z
+# PrathamOne UI v2 — Premium Reset Build
+Generated on: 2025-12-03T23:38:57.214555Z
 
-Install:
-1. Extract this zip into your project root.
-2. Ensure you have these packages installed:
-   - framer-motion
-   - tailwindcss (if using tailwind)
-3. Import globals in your app root (_app or layout):
-   import "@/styles/globals.css";
+This ZIP contains a clean, minimal, working scaffold of the FULL UI v2.
+Extract into your project root.
+Commit and deploy.
 
-Notes:
-- ContactForm uses supabase client; ensure lib/supabaseClient.ts exists.
-- Tailwind config provided should be merged if you already have one.
-- For production, run `npm run build`.
+If you want extended pages (Services, Portfolio, Contact, Author Program), tell ChatGPT: "Expand UI v2".

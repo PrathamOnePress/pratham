@@ -1,23 +1,22 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import ServiceCard from "@/components/ServiceCard";
+import PortfolioCard from "@/components/PortfolioCard";
 
-export default function ServicesPage() {
-  const services = [
-    { title: "Writing & Editing", desc: "Full manuscript creation, editing, and proofreading", icon: "✍️" },
-    { title: "Formatting & Typeset", desc: "KDP-ready and print-safe PDFs", icon: "📐" },
-    { title: "Cover Design & Print", desc: "Professional covers, spines, and back pages", icon: "🎨" }
+export default function PortfolioPage() {
+  const books = [
+    { title: "GanitSūtram", category: "Math", year: 2025 },
+    { title: "Coder who fears before Ai", category: "Autobiography", year: 2024 },
   ];
 
   return (
     <>
       <Nav />
-      <main className="bg-bg-primary text-text-primary min-h-screen">
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <h2 className="text-3xl font-bold mb-6">Services</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {services.map(s => <ServiceCard key={s.title} {...s} />)}
-          </div>
+      <main className="max-w-6xl mx-auto p-6 space-y-8">
+        <h1 className="text-4xl font-bold mb-6">Books</h1>
+        <div className="grid md:grid-cols-3 gap-6">
+          {books.map((b) => (
+            <PortfolioCard key={b.title} {...b} />
+          ))}
         </div>
       </main>
       <Footer />

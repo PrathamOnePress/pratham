@@ -1,33 +1,30 @@
-/**
- * PRATHAMONE OFFICIAL SOURCE FILE (COMPLETE SCAFFOLD)
- * Author: Jawahar R. Mallah
- * Website: https://press.prathamone.com
- * Project: PrathamOne Press — Complete Dev Scaffold
- */
+"use client";
+import { AnimatePresence, motion } from "framer-motion";
+import Nav from "@/components/Nav";
 
-import '../styles/theme.css';
-
-export const metadata = { title: 'PrathamOne Press' };
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <header className="header">
-          <div className="container" style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-            <div style={{fontWeight:700}}>PRATHAMONE</div>
-            <nav className="nav">
-              <a href="/">Home</a>
-              <a href="/releases" style={{marginLeft:16}}>Releases</a>
-              <a href="/books" style={{marginLeft:16}}>Books</a>
-              <a href="/assets" style={{marginLeft:16}}>Assets</a>
-              <a href="/branding" style={{marginLeft:16}}>Branding</a>
-              <a href="/admin/dashboard" style={{marginLeft:16}}>Admin</a>
-            </nav>
-          </div>
-        </header>
-        <main>{children}</main>
-        <footer className="footer">© PrathamOne • AITDL • press.prathamone.com</footer>
+        <Nav />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={typeof window !== "undefined" ? window.location.pathname : "root"}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
+
+        <a
+          href="/author-program"
+          className="fixed bottom-6 right-6 bg-brand-primary text-white px-5 py-3 rounded-full shadow-hard hover:scale-105 transition"
+        >
+          Start Your Book →
+        </a>
       </body>
     </html>
   );

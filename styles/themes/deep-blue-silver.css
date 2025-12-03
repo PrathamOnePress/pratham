@@ -1,12 +1,14 @@
 :root[data-theme='deep-blue-silver']{
  --bg-primary:#0A1A3A;
- --bg-secondary:#101B2D;
+ --bg-secondary:#0F1724;
  --bg-card:#18263F;
  --text-primary:#ffffff;
  --text-secondary:#C8D0E7;
  --text-muted:#8FA3C7;
- --color-primary:#4C74FF;
- --color-accent:#82A7FF;
+ --brand-primary:#4C74FF;
+ --brand-accent:#82A7FF;
  --silver:#C8D0E7;
- --border-color:#2A3952;
+ --border-color:#20304A;
+ --shadow-soft: 0 8px 20px rgba(2,8,23,0.45);
+ --shadow-hard: 0 12px 35px rgba(2,8,23,0.55);
 }

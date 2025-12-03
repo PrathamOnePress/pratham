@@ -1,23 +1,25 @@
 {
-  "name": "prathamone-publications",
+  "name": "prathamone-fullsite",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "npx tailwindcss -i ./styles/globals.css -o ./styles/tailwind.output.css --minify || true",
-    "firebase:serve": "npm run build && firebase emulators:start --only hosting"
+    "postinstall": "npx tailwindcss -i ./styles/globals.css -o ./styles/tailwind.output.css --minify || true"
   },
   "dependencies": {
     "next": "14.1.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "@supabase/supabase-js": "2.36.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8.4.0",
-    "tailwindcss": "^3.3.0"
+    "tailwindcss": "3.4.0",
+    "postcss": "8.4.35",
+    "autoprefixer": "10.4.17"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }

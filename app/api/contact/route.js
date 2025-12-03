@@ -1,18 +1,14 @@
-/*
-  Project: Prathamone Publications
-  Author: Jawahar R. Mallah
-  File: app/api/contact/route.js
-  Description: Server route to receive contact form submissions.
-*/
-import { NextResponse } from 'next/server';
 
-export async function POST(request) {
-  try {
-    const body = await request.json();
-    console.log('CONTACT FORM SUBMISSION:', body);
-    return NextResponse.json({ success: true, message: 'Message received' });
-  } catch (e) {
-    console.error('Contact route error', e);
-    return NextResponse.json({ success: false, message: 'Error' }, { status: 500 });
+import { supabaseAdmin } from '../../../lib/supabaseAdmin'
+
+export async function POST(req){
+  try{
+    const body = await req.json()
+    const { name, email, message } = body
+    const { data, error } = await supabaseAdmin.from('contacts').insert([{ name, email, message }])
+    if(error) return new Response(JSON.stringify({ success:false, message: error.message }), { status:500 })
+    return new Response(JSON.stringify({ success:true, message:'Saved' }), { status:200 })
+  }catch(e){
+    return new Response(JSON.stringify({ success:false, message: e.message }), { status:500 })
   }
 }

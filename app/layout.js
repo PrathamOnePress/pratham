@@ -1,21 +1,19 @@
 
-import './globals.css'
+import '../styles/globals.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 export const metadata = {
-  title: 'PrathamOne — We Build. We Write. We Deliver.',
-  description: 'PrathamOne — Corporate publishing studio. Fast, precise, trustworthy.'
+  title: 'PrathamOne — Publications',
+  description: 'PrathamOne — publishing studio'
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900">
+      <body>
         <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

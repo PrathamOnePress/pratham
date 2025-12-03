@@ -1,23 +1,29 @@
-/*
-  Project: Prathamone Publications
-  Author: Jawahar R. Mallah
-  File: app/books/page.js
-  Description: Books listing page.
-*/
-import { books } from '../../data/books';
-import BookCard from '../../components/BookCard';
 
-export const metadata = { title: 'Catalogue | Prathamone' };
+import Link from 'next/link'
+import { supabase } from '../../lib/supabaseClient'
 
-export default function Books() {
+async function getBooks(){
+  try{
+    const { data } = await supabase.from('books').select('*').order('id', { ascending: true }).limit(50)
+    return data || []
+  }catch(err){
+    return []
+  }
+}
+
+export default async function Books(){
+  const books = await getBooks()
   return (
-    <div className="bg-gray-50 min-h-screen py-12">
-      <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Our Catalogue</h1>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {books.map((book) => <BookCard key={book.id} book={book} />)}
-        </div>
+    <section className="max-w-6xl mx-auto p-6">
+      <h2 className="text-2xl font-semibold mb-4">Books</h2>
+      <div className="grid md:grid-cols-3 gap-4">
+        {books.map(b=> (
+          <Link key={b.id} href={`/books/${b.id}`} className="card">
+            <h3 className="font-semibold">{b.title}</h3>
+            <p className="text-sm text-gray-600">{b.author}</p>
+          </Link>
+        ))}
       </div>
-    </div>
-  );
+    </section>
+  )
 }

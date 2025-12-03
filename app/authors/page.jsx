@@ -1,1 +1,0 @@
-export default function Authors(){ return <div className='max-w-6xl mx-auto px-6 py-12'><h1 className='text-3xl font-semibold'>Author Program</h1></div> }

@@ -1,23 +1,19 @@
+import './globals.css';
+import Nav from '../components/Nav';
+import Sidebar from '../components/Sidebar';
 
-import '../styles/globals.css'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-
-export const metadata = {
-  title: 'PrathamOne — We Build. We Write. We Deliver.',
-  description: 'PrathamOne — Corporate publishing studio. Fast, precise, trustworthy.'
-}
+export const metadata = { title: 'PrathamOne' };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="bg-white text-gray-900">
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+    <html lang='en'>
+      <body>
+        <Nav />
+        <div className='container mx-auto p-4 flex gap-4'>
+          <Sidebar />
+          <main style={{flex:1}}>{children}</main>
+        </div>
       </body>
     </html>
-  )
+  );
 }

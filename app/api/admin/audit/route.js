@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { supabaseAdmin } from '../../../../../lib/supabaseServer';
-import { getProfileFromToken } from '../../../../../lib/getProfileFromToken';
+import { supabaseAdmin } from '../../../../lib/supabaseServer';
+import { getProfileFromToken } from '../../../../lib/getProfileFromToken';
 
 export async function GET(req) {
   const auth = req.headers.get('authorization') || '';

@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { supabaseAdmin } from '../../../../lib/supabaseServer';
 import { getProfileFromToken } from '../../../../lib/getProfileFromToken';
 import { logInfo, logError } from '../../../../lib/logger';
-import { checkRate } from '../../../_lib/rateLimit';
+import { checkRate } from '../../_lib/rateLimit';
 
 export async function POST(req) {
   const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown';

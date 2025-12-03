@@ -1,0 +1,12 @@
+:root[data-theme='deep-blue-silver']{
+ --bg-primary:#0A1A3A;
+ --bg-secondary:#101B2D;
+ --bg-card:#18263F;
+ --text-primary:#ffffff;
+ --text-secondary:#C8D0E7;
+ --text-muted:#8FA3C7;
+ --color-primary:#4C74FF;
+ --color-accent:#82A7FF;
+ --silver:#C8D0E7;
+ --border-color:#2A3952;
+}

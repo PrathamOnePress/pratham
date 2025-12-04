@@ -1,1 +1,1 @@
-// homepage
+export default function Page(){return(<div>Welcome to PrathamOne Full Starter</div>)}

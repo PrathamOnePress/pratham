@@ -1,1 +1,1 @@
-// book details page
+export default function Book(){return(<div>Book Details</div>)}

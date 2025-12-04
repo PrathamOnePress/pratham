@@ -1,1 +1,1 @@
-// supabase admin client
+export const supabaseAdmin={};

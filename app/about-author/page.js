@@ -1,1 +1,1 @@
-// about author page
+export default function Author(){return(<div>About the Author</div>)}

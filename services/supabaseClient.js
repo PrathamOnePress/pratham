@@ -1,1 +1,1 @@
-// supabase client
+export const supabaseClient={};

@@ -1,1 +1,1 @@
-// books list page
+export default function Books(){return(<div>Books List</div>)}

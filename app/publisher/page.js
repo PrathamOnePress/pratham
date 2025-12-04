@@ -1,1 +1,1 @@
-// publisher page
+export default function Publisher(){return(<div>Publisher Page</div>)}

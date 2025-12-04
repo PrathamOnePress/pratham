@@ -1,31 +1,33 @@
 /**
- * Root Layout
- * Project: PrathamOne Website
- * Company: Prathamone
+ * PRATHAMONE OFFICIAL SOURCE FILE (COMPLETE SCAFFOLD)
  * Author: Jawahar R. Mallah
+ * Website: https://press.prathamone.com
+ * Project: PrathamOne Press — Complete Dev Scaffold
  */
 
-import type { Metadata } from "next";
-import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import '../styles/theme.css';
 
-export const metadata: Metadata = {
-  title: "PrathamOne Press — Publishing Systems & Book Creation",
-  description: "PrathamOne Press builds structured publishing systems for authors, educators, and businesses.",
-};
+export const metadata = { title: 'PrathamOne Press' };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body>
+        <header className="header">
+          <div className="container" style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+            <div style={{fontWeight:700}}>PRATHAMONE</div>
+            <nav className="nav">
+              <a href="/">Home</a>
+              <a href="/releases" style={{marginLeft:16}}>Releases</a>
+              <a href="/books" style={{marginLeft:16}}>Books</a>
+              <a href="/assets" style={{marginLeft:16}}>Assets</a>
+              <a href="/branding" style={{marginLeft:16}}>Branding</a>
+              <a href="/admin/dashboard" style={{marginLeft:16}}>Admin</a>
+            </nav>
+          </div>
+        </header>
+        <main>{children}</main>
+        <footer className="footer">© PrathamOne • AITDL • press.prathamone.com</footer>
       </body>
     </html>
   );

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Project: PrathamOne Website
+ * Company: Prathamone
+ * Author: Jawahar R. Mallah
+ */
+
+html, body {
+  @apply bg-pr_dark text-white font-body;
+}
+
+.container-main {
+  @apply max-w-6xl mx-auto px-4;
+}

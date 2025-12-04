@@ -1,0 +1,22 @@
+/**
+ * Pricing Page
+ * Project: PrathamOne Website
+ * Company: Prathamone
+ * Author: Jawahar R. Mallah
+ */
+import { PageHeader } from "@/components/PageHeader";
+
+export default function Page() {
+  return (
+    <>
+      <PageHeader title="Pricing" subtitle="Transparent, scope-based pricing built for clarity and trust." />
+      <section className="container-main py-10 text-sm text-pr_silver">
+        <p>
+          This page is a structured placeholder for the <strong>Pricing</strong> section
+          of the PrathamOne website. Replace this block with detailed, brand-aligned
+          content as you refine copy, visuals, and calls-to-action.
+        </p>
+      </section>
+    </>
+  );
+}

@@ -1,3 +1,4 @@
+'use client';
 /**
  * AdminSidebar Component
  * Project: PrathamOne Website

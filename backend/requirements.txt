@@ -1,0 +1,9 @@
+
+fastapi
+uvicorn[standard]
+sqlmodel
+passlib[bcrypt]
+pyjwt
+python-multipart
+python-dotenv
+itsdangerous

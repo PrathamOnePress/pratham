@@ -1,0 +1,12 @@
+
+version: '3.8'
+services:
+  auth:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PRATHAM_JWT_SECRET=supersecret_in_dev
+      - COOKIE_SECURE=false
+      - REFRESH_EXPIRE_DAYS=7
+      - ACCESS_EXPIRE_MIN=15

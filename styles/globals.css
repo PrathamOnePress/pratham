@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brand-primary: #4f46e5;
+  --brand-secondary: #7c3aed;
+}
+
 body {
-  @apply bg-[#061230] text-white;
+  @apply bg-slate-50 text-slate-800 antialiased;
 }

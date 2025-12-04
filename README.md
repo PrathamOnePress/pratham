@@ -1,21 +1,13 @@
-# PrathamOne Press — Complete Dev Scaffold
+# Prathamone Publications (Production-ready)
 
-Includes:
-- Admin Dashboard (CRUD) with Supabase Auth (basic)
-- Press-kit ZIP generator backend
-- Database seeds (SQL)
-- Books pages with press-kit download
-- Branding page with placeholder high-res assets
+**Author:** Jawahar R. Mallah
+**Email:** jawahar.mallah@gmail.com
 
-## Quickstart
-1. Copy `.env.local.example` to `.env.local` and fill with Supabase keys.
-2. `npm install`
-3. `npm run dev`
+## Setup (local)
+1. `npm install`
+2. `npm run dev` (runs Next.js dev server)
+3. For Firebase emulator (optional): `npm run firebase:serve`
 
-## Deploy
-- Import repo to Vercel.
-- Add env vars in Vercel: NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY
-- Set domain CNAME to `cname.vercel-dns.com` for press.prathamone.com
-
-Notes:
-- Press-kit generator uses server-side zipping (archiver). Ensure Node environment supports streams.
+## Deploy (Vercel)
+1. Push repo to GitHub
+2. Import project in Vercel and deploy (Next.js is auto-detected)
